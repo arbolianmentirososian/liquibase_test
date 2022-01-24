@@ -1,0 +1,3 @@
+CREATE OR REPLACE FORCE VIEW WEBUSER.VIEW1
+
+WHERE b.current_cart_status = 'A';
