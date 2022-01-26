@@ -1,3 +1,4 @@
 CREATE MATERIALIZED VIEW WEBUSER.MATERIALIZED_VIEW1
 
     on (e.celement = b.celement);
+/
