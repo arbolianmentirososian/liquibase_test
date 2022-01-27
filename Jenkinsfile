@@ -9,10 +9,9 @@ pipeline {
     stages {
         stage('Validate') {
             steps {
-                withEnv(['PATH_LB_VALIDATOR=/var/jenkins_home/bin']) {
-                    sh '''
-                    $PATH_LB_VALIDATOR/liquibase_validator
-                    '''
+                script {
+                    liquibase_validator
+                }
                 }
             }
         }
