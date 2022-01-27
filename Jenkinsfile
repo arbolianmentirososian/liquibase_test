@@ -10,8 +10,9 @@ pipeline {
         stage('Validate') {
             steps {
                 script {
-                    liquibase_validator
-                }
+                    sh """
+                        liquibase_validator
+                    """
                 }
             }
         }
