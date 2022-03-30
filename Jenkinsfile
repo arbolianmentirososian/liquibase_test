@@ -7,6 +7,16 @@ pipeline {
 	    buildDiscarder(logRotator(artifactNumToKeepStr: '7'))
 	}
     stages {
+        stage('whoami') {
+            steps {
+                script {
+                    sh """
+                        whoami
+                    """
+                }
+            }
+        }
+    }
         stage('Validate') {
             steps {
                 script {
