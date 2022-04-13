@@ -19,9 +19,9 @@ pipeline {
         stage('Validate') {
             steps {
                 script {
-                    sh """
-                        liquibase_validator
-                    """
+                    ansiColor('xterm') {
+                        sh "liquibase_validator"
+                    }
                 }
             }
         }
